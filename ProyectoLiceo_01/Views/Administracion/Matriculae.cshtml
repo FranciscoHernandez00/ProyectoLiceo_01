@@ -436,8 +436,26 @@
 
 @section Francisco{
 <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
-
 <script>
+
+    var Responsable = {
+        NombrePadre: $("#NombrePadre").val,
+        DUI: $("#DUI").val,
+        Profesion: $("#Profesion").val,
+        Nacionalidad: $("#Nacionalidad").val,
+        NombreMadre: $("#NombreMadre").val,
+        DUIMadre: $("#DUIMadre").val,
+        ProfesionMadre: $("#ProfesionMadre").val,
+        NacionalidadMadre: $("#NacionalidadMadre").val,
+        NombreResponsable: $("#NombreResponsable").val,
+        FechaNacimientoResponsable: $("#FechaNacimientoResponsable").val,
+        Lugar: $("#Lugar").val,
+        DUIResponsable: $("#DUIResponsable").val,
+        Telefono: $("#Telefono").val,
+        Parentesco: $("#Parentesco").val,
+        Escolaridad: $("#Escolaridad").val,
+        DocumentosEntregados: $("#DocumentosEntregados").val,
+    };
 
     var Alumnas = {
         NombreCompleto: $("#NombreCompleto").val,
@@ -462,30 +480,11 @@
 
     };
 
-    var Responsable = {
-        NombrePadre: $("#NombrePadre").val,
-        DUI: $("#DUI").val,
-        Profesion: $("#Profesion").val,
-        Nacionalidad: $("#Nacionalidad").val,
-        NombreMadre: $("#NombreMadre").val,
-        DUIMadre: $("#DUIMadre").val,
-        ProfesionMadre: $("#ProfesionMadre").val,
-        NacionalidadMadre: $("#NacionalidadMadre").val,
-        NombreResponsable: $("#NombreResponsable").val,
-        FechaNacimientoResponsable: $("#FechaNacimientoResponsable").val,
-        Lugar: $("#Lugar").val,
-        DUIResponsable: $("#DUIResponsable").val,
-        Telefono: $("#Telefono").val,
-        Parentesco: $("#Parentesco").val,
-        Escolaridad: $("#Escolaridad").val,
-        DocumentosEntregados: $("#DocumentosEntregados").val,
-    };
-
     $("#btnCreate").click(function () {
         $.ajax({
             type: "Post",
-            url: "/Home/SaveDataInDatabase",
-            data: Alumnas, Responsable,
+            url: "/Administracion/SaveDataInDatabase",
+            data: Responsable, Alumnas,
             success: function (result) {
                 alert("Success!..");
             }

@@ -180,138 +180,68 @@ namespace ProyectoLiceo_01.Controllers
         {
             return View();
         }
-
-        public JsonResult SaveDataInDatabase(AlumnasVIewModel model)
+        [HttpPost]
+        public ActionResult Matriculae(AlumnasVIewModel model)
         {
-            var result = false;
-
-            try
+            var objResponsable = new Responsables
             {
-                var objResponsable = new Responsables
-                {
-                    NombrePadre = model.NombrePadre,
-                    DUI = model.DUI,
-                    Profesion = model.Profesion,
-                    Nacionalidad = model.Nacionalidad,
-                    NombreMadre = model.NombreMadre,
-                    DUIMadre = model.DUIMadre,
-                    ProfesionMadre = model.ProfesionMadre,
-                    NacionalidadMadre = model.NacionalidadMadre,
-                    NombreResponsable = model.NombreResponsable,
-                    FechaNacimientoResponsable = model.FechaNacimientoResponsable,
-                    Lugar = model.Lugar,
-                    DUIResponsable = model.DUIResponsable,
-                    Parentesco = model.Parentesco,
-                    Telefono = model.Telefono,
-                    Escolaridad = model.Escolaridad,
-                    DocumentosEntregados = model.DocumentosEntregados
+                NombrePadre = model.NombrePadre,
+                DUI = model.DUI,
+                Profesion = model.Profesion,
+                Nacionalidad = model.Nacionalidad,
+                NombreMadre = model.NombreMadre,
+                DUIMadre = model.DUIMadre,
+                ProfesionMadre = model.ProfesionMadre,
+                NacionalidadMadre = model.NacionalidadMadre,
+                NombreResponsable = model.NombreResponsable,
+                FechaNacimientoResponsable = model.FechaNacimientoResponsable,
+                Lugar = model.Lugar,
+                DUIResponsable = model.DUIResponsable,
+                Parentesco = model.Parentesco,
+                Telefono = model.Telefono,
+                Escolaridad = model.Escolaridad,
+                DocumentosEntregados = model.DocumentosEntregados
 
-                };
+            };
 
-                var objAlumna = new Alumnas
-                {
-
-                    NombreCompleto = model.NombreCompleto,
-                    NIE = model.NIE,
-                    Edad = model.Edad,
-                    Matriculada = model.Matriculada,
-                    Anio = model.Anio,
-                    Opcion = model.Opcion,
-                    FechaNacimiento = model.FechaNacimiento,
-                    Direccion = model.Direccion,
-                    Vivecon = model.Vivecon,
-                    NumeroFamilia = model.NumeroFamilia,
-                    DistanciaKm = model.DistanciaKm,
-                    Transporte = model.Transporte,
-                    Enfermedad = model.Enfermedad,
-                    CualUno = model.CualUno,
-                    CualDos = model.CualDos,
-                    Medicamento = model.Medicamento,
-                    Depende = model.Depende,
-                    Escuela = model.Escuela,
-                    Actividad = model.Actividad,
-                    FechaMatricula = model.FechaMatricula
-
-                };
-
-                using (var db = new Contexto())
-                {
-                    db.Responsables.Add(objResponsable);
-                    db.Alumnas.Add(objAlumna);
-                    //objAlumna.AlumnasID = objAlumna.AlumnasID;
-                    db.SaveChanges();
-
-                }
-            }
-            catch (Exception ex)
+            var objAlumna = new Alumnas
             {
-                throw ex;
+
+                NombreCompleto = model.NombreCompleto,
+                NIE = model.NIE,
+                Edad = model.Edad,
+                Matriculada = model.Matriculada,
+                Anio = model.Anio,
+                Opcion = model.Opcion,
+                FechaNacimiento = model.FechaNacimiento,
+                Direccion = model.Direccion,
+                Vivecon = model.Vivecon,
+                NumeroFamilia = model.NumeroFamilia,
+                DistanciaKm = model.DistanciaKm,
+                Transporte = model.Transporte,
+                Enfermedad = model.Enfermedad,
+                CualUno = model.CualUno,
+                CualDos = model.CualDos,
+                Medicamento = model.Medicamento,
+                Depende = model.Depende,
+                Escuela = model.Escuela,
+                Actividad = model.Actividad,
+                FechaMatricula = model.FechaMatricula
+
+            };
+
+            using (var db = new Contexto())
+            {
+                db.Responsables.Add(objResponsable);
+                db.Alumnas.Add(objAlumna);
+                //objAlumna.AlumnasID = objAlumna.AlumnasID;
+                db.SaveChanges();
+
             }
 
-            return Json(result, JsonRequestBehavior.AllowGet);
+            return RedirectToAction("Index", "Alumnas");
         }
 
-
-        //public ActionResult Matriculae(AlumnasVIewModel model)
-        //{
-        //    var objResponsable = new Responsables
-        //    {
-        //        NombrePadre = model.NombrePadre,
-        //        DUI = model.DUI,
-        //        Profesion = model.Profesion,
-        //        Nacionalidad = model.Nacionalidad,
-        //        NombreMadre = model.NombreMadre,
-        //        DUIMadre = model.DUIMadre,
-        //        ProfesionMadre = model.ProfesionMadre,
-        //        NacionalidadMadre = model.NacionalidadMadre,
-        //        NombreResponsable = model.NombreResponsable,
-        //        FechaNacimientoResponsable = model.FechaNacimientoResponsable,
-        //        Lugar = model.Lugar,
-        //        DUIResponsable = model.DUIResponsable,
-        //        Parentesco = model.Parentesco,
-        //        Telefono = model.Telefono,
-        //        Escolaridad = model.Escolaridad,
-        //        DocumentosEntregados = model.DocumentosEntregados
-
-        //    };
-
-        //    var objAlumna = new Alumnas
-        //    {
-
-        //        NombreCompleto = model.NombreCompleto,
-        //        NIE = model.NIE,
-        //        Edad = model.Edad,
-        //        Matriculada = model.Matriculada,
-        //        Anio = model.Anio,
-        //        Opcion = model.Opcion,
-        //        FechaNacimiento = model.FechaNacimiento,
-        //        Direccion = model.Direccion,
-        //        Vivecon = model.Vivecon,
-        //        NumeroFamilia = model.NumeroFamilia,
-        //        DistanciaKm = model.DistanciaKm,
-        //        Transporte = model.Transporte,
-        //        Enfermedad = model.Enfermedad,
-        //        CualUno = model.CualUno,
-        //        CualDos = model.CualDos,
-        //        Medicamento = model.Medicamento,
-        //        Depende = model.Depende,
-        //        Escuela = model.Escuela,
-        //        Actividad = model.Actividad,
-        //        FechaMatricula = model.FechaMatricula
-
-        //    };
-
-        //    using (var db = new Contexto())
-        //    {
-        //        db.Responsables.Add(objResponsable);
-        //        db.Alumnas.Add(objAlumna);
-        //        //objAlumna.AlumnasID = objAlumna.AlumnasID;
-        //        db.SaveChanges();
-
-        //    }
-
-        //    return RedirectToAction("Index", "Alumnas");
-        //}
         protected override void Dispose(bool disposing)
         {
             if (disposing)
