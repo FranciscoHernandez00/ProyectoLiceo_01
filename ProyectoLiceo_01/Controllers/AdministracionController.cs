@@ -183,6 +183,26 @@ namespace ProyectoLiceo_01.Controllers
         [HttpPost]
         public ActionResult Matriculae(AlumnasVIewModel model)
         {
+            var objResponsable = new Responsables
+            {
+                NombrePadre = model.NombrePadre,
+                DUI = model.DUI,
+                Profesion = model.Profesion,
+                Nacionalidad = model.Nacionalidad,
+                NombreMadre = model.NombreMadre,
+                DUIMadre = model.DUIMadre,
+                ProfesionMadre = model.ProfesionMadre,
+                NacionalidadMadre = model.NacionalidadMadre,
+                NombreResponsable = model.NombreResponsable,
+                FechaNacimientoResponsable = model.FechaNacimientoResponsable,
+                Lugar = model.Lugar,
+                DUIResponsable = model.DUIResponsable,
+                Parentesco = model.Parentesco,
+                Telefono = model.Telefono,
+                Escolaridad = model.Escolaridad,
+                DocumentosEntregados = model.DocumentosEntregados
+
+            };
 
             var objAlumna = new Alumnas
             {
@@ -209,28 +229,7 @@ namespace ProyectoLiceo_01.Controllers
                 FechaMatricula = model.FechaMatricula
 
             };
-
-            var objResponsable = new Responsables
-            {
-                NombrePadre = model.NombrePadre,
-                DUI = model.DUI,
-                Profesion = model.Profesion,
-                Nacionalidad = model.Nacionalidad,
-                NombreMadre = model.NombreMadre,
-                DUIMadre = model.DUIMadre,
-                ProfesionMadre = model.ProfesionMadre,
-                NacionalidadMadre = model.NacionalidadMadre,
-                NombreResponsable = model.NombreResponsable,
-                FechaNacimientoResponsable = model.FechaNacimientoResponsable,
-                Lugar = model.Lugar,
-                DUIResponsable = model.DUIResponsable,
-                Parentesco = model.Parentesco,
-                Telefono = model.Telefono,
-                Escolaridad = model.Escolaridad,
-                DocumentosEntregados = model.DocumentosEntregados
-
-            };
-
+            
             using (var db = new Contexto())
             {
                 db.Responsables.Add(objResponsable);
@@ -239,7 +238,8 @@ namespace ProyectoLiceo_01.Controllers
                 db.SaveChanges();
 
             }
-            return Json(db, JsonRequestBehavior.AllowGet);
+
+            return RedirectToAction("Index", "Alumnas");
         }
         protected override void Dispose(bool disposing)
         {

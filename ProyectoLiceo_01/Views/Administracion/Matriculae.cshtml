@@ -479,7 +479,7 @@
     $("#btnCreate").click(function () {
         $.ajax({
             type: "POST",
-            url: "/Administracion/Matriculae",
+            url: "~/Controllers/AdministracionController/Matriculae",
             contentType: "application/json; charset=utf-8",
             data: Alumnas, Responsable,
             dataType: "json",
