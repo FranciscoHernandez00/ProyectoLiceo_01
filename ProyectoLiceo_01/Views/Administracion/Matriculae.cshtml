@@ -434,8 +434,6 @@
 
 
 
-@section Francisco{
-<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
 <script>
 
     var Responsable = {
@@ -483,8 +481,9 @@
     $("#btnCreate").click(function () {
         $.ajax({
             type: "Post",
-            url: "/Administracion/SaveDataInDatabase",
+            url: "/Administracion/Matriculae",
             data: Responsable, Alumnas,
+            dataType: "json",
             success: function (result) {
                 alert("Success!..");
             }
@@ -512,4 +511,4 @@
 
 </script>
 
-}
+
