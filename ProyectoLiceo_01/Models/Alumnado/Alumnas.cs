@@ -101,6 +101,7 @@ namespace ProyectoLiceo_01.Models.Alumnado
 
     public class AlumnasVIewModel
     {
+        public int AlumnasID { get; set; }
 
         public string NombreCompleto { get; set; }
 
