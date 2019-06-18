@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.572
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProyectoLiceo_01", "ProyectoLiceo_01\ProyectoLiceo_01.csproj", "{80472F8A-7C31-4759-B10E-571DD54AF4ED}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{80472F8A-7C31-4759-B10E-571DD54AF4ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80472F8A-7C31-4759-B10E-571DD54AF4ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80472F8A-7C31-4759-B10E-571DD54AF4ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80472F8A-7C31-4759-B10E-571DD54AF4ED}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F0E32A1D-7FC0-44B1-8185-E1A4E0693B0D}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 2
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://hosting.ca2s.com:8088/tfs/univo
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = ProyectoLiceo_01\\ProyectoLiceo_01.csproj
+		SccProjectName1 = ProyectoLiceo_01
+		SccLocalPath1 = ProyectoLiceo_01
+	EndGlobalSection
+EndGlobal

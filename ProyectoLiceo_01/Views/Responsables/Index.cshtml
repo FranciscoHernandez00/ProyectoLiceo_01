@@ -1,0 +1,123 @@
+﻿@model IEnumerable<ProyectoLiceo_01.Models.Alumnado.Responsables>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NombreResponsable)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NombrePadre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DUI)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Profesion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nacionalidad)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NombreMadre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DUIMadre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProfesionMadre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NacionalidadMadre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaNacimientoResponsable)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Lugar)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DUIResponsable)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Parentesco)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Telefono)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Escolaridad)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DocumentosEntregados)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NombreResponsable)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NombrePadre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DUI)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Profesion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nacionalidad)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NombreMadre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DUIMadre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProfesionMadre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NacionalidadMadre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FechaNacimientoResponsable)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Lugar)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DUIResponsable)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Parentesco)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Telefono)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Escolaridad)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DocumentosEntregados)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ResponsableID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ResponsableID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ResponsableID })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,146 @@
+﻿@model ProyectoLiceo_01.Models.Alumnado.Responsables
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Responsables</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NombreResponsable)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NombreResponsable)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NombrePadre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NombrePadre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DUI)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DUI)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Profesion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Profesion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nacionalidad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nacionalidad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NombreMadre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NombreMadre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DUIMadre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DUIMadre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProfesionMadre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProfesionMadre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NacionalidadMadre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NacionalidadMadre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaNacimientoResponsable)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaNacimientoResponsable)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Lugar)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Lugar)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DUIResponsable)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DUIResponsable)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Parentesco)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Parentesco)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Telefono)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Telefono)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Escolaridad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Escolaridad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DocumentosEntregados)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DocumentosEntregados)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ResponsableID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

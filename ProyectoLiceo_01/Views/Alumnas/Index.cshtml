@@ -1,0 +1,153 @@
+﻿@model IEnumerable<ProyectoLiceo_01.Models.Alumnado.Alumnas>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Responsables.NombreResponsable)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NombreCompleto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NIE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Edad)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Matriculada)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Anio)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Opcion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaNacimiento)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Direccion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Vivecon)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NumeroFamilia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DistanciaKm)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Transporte)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Enfermedad)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CualUno)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Medicamento)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CualDos)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Depende)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Escuela)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Actividad)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaMatricula)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Responsables.NombreResponsable)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NombreCompleto)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NIE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Edad)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Matriculada)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Anio)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Opcion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FechaNacimiento)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Direccion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Vivecon)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NumeroFamilia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DistanciaKm)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Transporte)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Enfermedad)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CualUno)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Medicamento)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CualDos)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Depende)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Escuela)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Actividad)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FechaMatricula)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.AlumnasID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.AlumnasID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.AlumnasID })
+        </td>
+    </tr>
+}
+
+</table>

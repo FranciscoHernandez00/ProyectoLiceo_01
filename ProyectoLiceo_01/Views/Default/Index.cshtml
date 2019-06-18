@@ -1,0 +1,26 @@
+﻿@model IEnumerable<ProyectoLiceo_01.Models.ViewModel>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<br />
+<table class="table table-striped table-bordered" >
+    <thead class="bg-dark text-white">
+        <tr>
+            <th>Alumna</th>
+            <th>Responsable</th>
+            <th>Matricula Numero</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.alumnas.NombreCompleto</td>
+                <td>@item.responsables.PersonaResponsable</td>
+                <td>@item.matriculas.Matricula</td>
+            </tr>
+        }
+    </tbody>
+</table>
+

@@ -1,0 +1,101 @@
+﻿ <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema Academico </title>
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/Academica/academica/css/lasQuery.css" rel="stylesheet" />
+    <link href="~/Content/Academica/academica/fonts.css" rel="stylesheet" />
+    <link href="~/Content/Academica/academica/css/micss.css" rel="stylesheet" />
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+    <link rel="icon" type="image/png" href="~/Content/liceo.jpg" />
+</head>
+<body>
+
+    <!--INICIO DE LA BARRA DE NAVEGACIÓN-->
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand">Lifraga</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>@Html.ActionLink("Usuario", "Index", "Usuarios")</li>
+                    @*<li><a href="">Menu 01</a></li>
+                        <li><a href="">Menu 02</a></li>
+                        <li><a href="">Menu 03</a></li>
+                        <li><a href="">Menu 04</a></li>
+                        <li><a href="">Menu 04</a></li>
+                        <li><a href="">Menu 06</a></li>
+                        <li><a href="https://www.facebook.com/Administraci%C3%B3n-Acad%C3%A9mica-Ues-Fmo-1838656763054559/?fref=ts"><i class="icon-facebook2" aria-hidden="true"></i></a></li>*@
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+    <br />
+
+    <!--INICIO DE BANNER-->
+    <div class="banner">
+        <div class="container">
+            <img src="~/Content/Academica/academica/liceo.jpg" class="logo" />
+        </div>
+    </div><!--Acá termina el banner-->
+
+    <div class="container" id="contenido">
+        <div class="row-fluid">
+            <div class="col-md-3" id="contenido2">
+                <!--Inicio barra de navegación lateral-->
+                <ul class="nav nav-pills nav-stacked" id="navLateral">
+                    <li role="navigation" class="active"><a href=""> Inicio </a></li>
+                    <li role="navigation">@Html.ActionLink("Menu", "Director", "Administracion")
+                    <li role="navigation">@Html.ActionLink("Materias", "Index", "Materias")
+                    <li role="navigation">@Html.ActionLink("Periodos", "Index", "Periodoes")
+                    <li role="navigation">@Html.ActionLink("Ofertas Academicas", "Index", "OpcionesAcademicas")
+                    <li role="navigation"><a href="/Administracion/LogOut"> Cerrar Sesión </a></li>
+
+                </ul>
+            </div><!--Fin barra de navegación lateral-->
+
+            <div class="container">
+                <div class="row-fluid">
+                    <div class="">
+                        <div class="col-md-9">
+
+                            @RenderBody()
+                            <hr />
+
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-2">
+                </div>
+                <div class="col-md-10">
+
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <center> <footer><b>Liceo Francisco Gavidia, 2019. Reservados todos los derechos.</b></footer></center><br />
+
+</body>
+</html>

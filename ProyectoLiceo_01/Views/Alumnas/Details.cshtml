@@ -1,0 +1,186 @@
+﻿@model ProyectoLiceo_01.Models.Alumnado.Alumnas
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Alumnas</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Responsables.NombreResponsable)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Responsables.NombreResponsable)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NombreCompleto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NombreCompleto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NIE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NIE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Edad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Edad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Matriculada)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Matriculada)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Anio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Anio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Opcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Opcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaNacimiento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaNacimiento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Direccion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Direccion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Vivecon)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Vivecon)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumeroFamilia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumeroFamilia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DistanciaKm)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DistanciaKm)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Transporte)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Transporte)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Enfermedad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Enfermedad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CualUno)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CualUno)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Medicamento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Medicamento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CualDos)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CualDos)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Depende)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Depende)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Escuela)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Escuela)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Actividad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Actividad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaMatricula)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaMatricula)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.AlumnasID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

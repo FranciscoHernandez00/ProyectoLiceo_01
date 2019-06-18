@@ -1,0 +1,138 @@
+﻿@model ProyectoLiceo_01.Models.DocentesAsignaturaViewModel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Docentes</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NombreDocente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NombreDocente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Apellido)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Apellido)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Edad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Edad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaNacimiento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaNacimiento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Direccion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Direccion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Telefonos)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Telefonos)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NoDUI)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NoDUI)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NoNIT)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NoNIT)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NoISSS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NoISSS)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AFP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AFP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NoAFP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NoAFP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NIP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NIP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Estado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Estado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Asignaturas)
+        </dt>
+
+        <dd>
+            @foreach (var item in Model.Asignaturas)
+            {
+                if (item.Checked)
+                {
+                    <div>
+                        @item.Nombre
+                    </div>
+                }
+            }
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.DocenteID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
