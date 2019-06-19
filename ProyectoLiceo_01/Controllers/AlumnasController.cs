@@ -44,7 +44,7 @@ namespace ProyectoLiceo_01.Controllers
             return View();
         }
 
-        // POST: Alumnas/Create
+        // POST: Alumnas/Create wawawawwa
         // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que desea enlazarse. Para obtener 
         // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
