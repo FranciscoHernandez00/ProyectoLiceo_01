@@ -2,6 +2,7 @@
 
 @{
     ViewBag.Title = "Index";
+    Layout = null;
 }
 
 <h2>Index</h2>
@@ -30,9 +31,9 @@
         </td>
         
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.DocenteID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.DocenteID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.DocenteID })
+            @Html.ActionLink("Asignar Asignaturas", "Edit", new { id=item.DocenteID }) |
+            @Html.ActionLink("Asignar Especialidades", "Edito", new { id=item.DocenteID })
+            
         </td>
     </tr>
 }

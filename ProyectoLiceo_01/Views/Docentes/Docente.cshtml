@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewBag.Title = "Docente";
+}
+<style>
+    ul.nav.nav-tabs{
+        margin: 10px 0px;
+    }
+
+        ul.nav.nav-tabs li:not(.active) a {
+            background-color: #00579E;
+            color: white;
+        }
+
+        ul.nav.nav-tabs li.active a {
+            border-top: 3px solid #00579E;
+        }
+</style>
+
+<h2>Docente</h2>
+<br />
+<ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#Primera"> Docentes </a></li>
+    <li><a data-toggle="tab" href="#Segunda"> Asignaturas </a></li>
+    <li><a data-toggle="tab" href="#Tercera"> Especialidades </a></li>
+</ul>
+<div class="tab-content">
+    <div id="Primera" class="tab-pane fade in active"> @Html.Action("Index") </div>
+    <div id="Segunda" class="tab-pane fade in"> @Html.Action("Index")  </div>
+    <div id="Tercera" class="tab-pane fade in"> @Html.Action("Index")  </div>
+</div>

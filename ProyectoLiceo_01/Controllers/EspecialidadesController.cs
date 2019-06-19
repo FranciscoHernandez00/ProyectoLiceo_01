@@ -10,116 +10,107 @@ using ProyectoLiceo_01.Models;
 
 namespace ProyectoLiceo_01.Controllers
 {
-    public class UsuariosController : Controller
+    public class EspecialidadesController : Controller
     {
         private Contexto db = new Contexto();
 
-        // GET: Usuarios
+        // GET: Especialidades
         public ActionResult Index()
         {
-            var usuarios = db.Usuarios.Include(u => u.Docentes).Include(u => u.Roles);
-            return View(usuarios.ToList());
+            return View(db.Especialidades.ToList());
         }
 
-        // GET: Usuarios/Details/5
+        // GET: Especialidades/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Usuarios usuarios = db.Usuarios.Find(id);
-            if (usuarios == null)
+            Especialidades especialidades = db.Especialidades.Find(id);
+            if (especialidades == null)
             {
                 return HttpNotFound();
             }
-            return View(usuarios);
+            return View(especialidades);
         }
 
-        // GET: Usuarios/Create
+        // GET: Especialidades/Create
         public ActionResult Create()
         {
-            ViewBag.DocenteID = new SelectList(db.Docentes, "DocenteID", "NombreDocente");
-            ViewBag.RolID = new SelectList(db.Roles, "RolID", "TipoRol");
             return View();
         }
 
-        // POST: Usuarios/Create
+        // POST: Especialidades/Create
         // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que desea enlazarse. Para obtener 
         // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "UsuariosID,Nombre,Apellido,Password,RolID,DocenteID")] Usuarios usuarios)
+        public ActionResult Create([Bind(Include = "EspecialidadID,NombreEspecialidad,Descripcion")] Especialidades especialidades)
         {
             if (ModelState.IsValid)
             {
-                db.Usuarios.Add(usuarios);
+                db.Especialidades.Add(especialidades);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            ViewBag.DocenteID = new SelectList(db.Docentes, "DocenteID", "NombreDocente", usuarios.DocenteID);
-            ViewBag.RolID = new SelectList(db.Roles, "RolID", "TipoRol", usuarios.RolID);
-            return View(usuarios);
+            return View(especialidades);
         }
 
-        // GET: Usuarios/Edit/5
+        // GET: Especialidades/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Usuarios usuarios = db.Usuarios.Find(id);
-            if (usuarios == null)
+            Especialidades especialidades = db.Especialidades.Find(id);
+            if (especialidades == null)
             {
                 return HttpNotFound();
             }
-            ViewBag.DocenteID = new SelectList(db.Docentes, "DocenteID", "NombreDocente", usuarios.DocenteID);
-            ViewBag.RolID = new SelectList(db.Roles, "RolID", "TipoRol", usuarios.RolID);
-            return View(usuarios);
+            return View(especialidades);
         }
 
-        // POST: Usuarios/Edit/5
+        // POST: Especialidades/Edit/5
         // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que desea enlazarse. Para obtener 
         // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "UsuariosID,Nombre,Apellido,Password,RolID,DocenteID")] Usuarios usuarios)
+        public ActionResult Edit([Bind(Include = "EspecialidadID,NombreEspecialidad,Descripcion")] Especialidades especialidades)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(usuarios).State = EntityState.Modified;
+                db.Entry(especialidades).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.DocenteID = new SelectList(db.Docentes, "DocenteID", "NombreDocente", usuarios.DocenteID);
-            ViewBag.RolID = new SelectList(db.Roles, "RolID", "TipoRol", usuarios.RolID);
-            return View(usuarios);
+            return View(especialidades);
         }
 
-        // GET: Usuarios/Delete/5
+        // GET: Especialidades/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Usuarios usuarios = db.Usuarios.Find(id);
-            if (usuarios == null)
+            Especialidades especialidades = db.Especialidades.Find(id);
+            if (especialidades == null)
             {
                 return HttpNotFound();
             }
-            return View(usuarios);
+            return View(especialidades);
         }
 
-        // POST: Usuarios/Delete/5
+        // POST: Especialidades/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Usuarios usuarios = db.Usuarios.Find(id);
-            db.Usuarios.Remove(usuarios);
+            Especialidades especialidades = db.Especialidades.Find(id);
+            db.Especialidades.Remove(especialidades);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

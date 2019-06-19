@@ -1,4 +1,4 @@
-﻿@model IEnumerable<ProyectoLiceo_01.Models.Asignaturas>
+﻿@model IEnumerable<ProyectoLiceo_01.Models.Especialidades>
 
 @{
     ViewBag.Title = "Index";
@@ -13,7 +13,7 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.NombreAsignatura)
+            @Html.DisplayNameFor(model => model.NombreEspecialidad)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Descripcion)
@@ -24,15 +24,15 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.NombreAsignatura)
+            @Html.DisplayFor(modelItem => item.NombreEspecialidad)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Descripcion)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.AsignaturaID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.AsignaturaID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.AsignaturaID })
+            @Html.ActionLink("Edit", "Edit", new { id=item.EspecialidadID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.EspecialidadID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.EspecialidadID })
         </td>
     </tr>
 }

@@ -14,6 +14,11 @@ namespace ProyectoLiceo_01.Controllers
     {
         private Contexto db = new Contexto();
 
+        public ActionResult Docente()
+        {
+            return View();
+        }
+
         // GET: Docentes
         public ActionResult Index()
         {
@@ -60,8 +65,13 @@ namespace ProyectoLiceo_01.Controllers
 
             return View(ViewModel);
         }
+        
+        public ActionResult Edito()
+        {
+            return View();
+        }
 
-        // GET: Docentes/Create
+
         public ActionResult Create()
         {
             return View();

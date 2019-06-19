@@ -148,14 +148,6 @@ E:\Proyectos de Prueba\ProyectoLiceo_01\ProyectoLiceo_01\bin\System.Web.Helpers.
 E:\Proyectos de Prueba\ProyectoLiceo_01\ProyectoLiceo_01\bin\System.Web.Mvc.xml
 E:\Proyectos de Prueba\ProyectoLiceo_01\ProyectoLiceo_01\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 E:\Proyectos de Prueba\ProyectoLiceo_01\ProyectoLiceo_01\obj\Debug\ProyectoLiceo_01.csprojAssemblyReference.cache
-E:\Proyectos de Prueba\ProyectoLiceo_01\ProyectoLiceo_01\obj\Debug\ProyectoLiceo_01.Migrations.InitialCreate.resources
-E:\Proyectos de Prueba\ProyectoLiceo_01\ProyectoLiceo_01\obj\Debug\ProyectoLiceo_01.Migrations.Materia.resources
-E:\Proyectos de Prueba\ProyectoLiceo_01\ProyectoLiceo_01\obj\Debug\ProyectoLiceo_01.Migrations.Opciones.resources
-E:\Proyectos de Prueba\ProyectoLiceo_01\ProyectoLiceo_01\obj\Debug\ProyectoLiceo_01.Migrations.periodo.resources
-E:\Proyectos de Prueba\ProyectoLiceo_01\ProyectoLiceo_01\obj\Debug\ProyectoLiceo_01.Migrations.periodocambio.resources
-E:\Proyectos de Prueba\ProyectoLiceo_01\ProyectoLiceo_01\obj\Debug\ProyectoLiceo_01.Migrations.Alumnas.resources
-E:\Proyectos de Prueba\ProyectoLiceo_01\ProyectoLiceo_01\obj\Debug\ProyectoLiceo_01.Migrations.nota.resources
-E:\Proyectos de Prueba\ProyectoLiceo_01\ProyectoLiceo_01\obj\Debug\ProyectoLiceo_01.csproj.GenerateResource.cache
 E:\Proyectos de Prueba\ProyectoLiceo_01\ProyectoLiceo_01\obj\Debug\ProyectoLiceo_01.csproj.CoreCompileInputs.cache
 E:\Proyectos de Prueba\ProyectoLiceo_01\ProyectoLiceo_01\obj\Debug\ProyectoLiceo_01.csproj.CopyComplete
 E:\Proyectos de Prueba\ProyectoLiceo_01\ProyectoLiceo_01\obj\Debug\ProyectoLiceo_01.dll
